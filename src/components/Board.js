@@ -18,18 +18,18 @@ export default function Board() {
     }
 
     const handleSubmit = (event) => {
-        console.log("this is the value of size" + size)
         event.preventDefault();
         let newBoard = [...Array(size)].map(e => Array(size));
-        console.log(newBoard);
         let boardVal = false;
         for(let i=0; i<size; i++){
             for(let j=0; j<size; j++){
-                newBoard[i].push(!boardVal? 0 : 1);
+                newBoard[i][j]=!boardVal? 0 : 1;
+                boardVal = !boardVal;
+            }
+            if(size %2 === 0){
                 boardVal = !boardVal;
             }
         }
-
         setBoard(newBoard);
     }
     return (

@@ -6,7 +6,7 @@ export default function Row({singleRow}) {
         <div className="board-row">
             {singleRow.map((piece, index) => (
                 <Piece key={index}
-                color={piece ? 'black-piece' : 'white-piece'}/>
+                color={!piece ? 'black-piece' : 'white-piece'}/>
             ))}
         </div>
     )
