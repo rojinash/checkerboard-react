@@ -1,10 +1,7 @@
 import React from 'react'
 
-export default function Piece({color, num, newLine}) {
+export default function Piece({color}) {
     return (
-        <div>{newLine ? <div>
-            <div className="yellow-piece"></div> <p>Add a new line here?</p>
-        </div>: <div className={color}>{newLine}</div>}    
-        </div>
+        <div className={color}></div>
     )
 }
