@@ -15,6 +15,7 @@ export default function Board() {
     ]);
     const handleChange = (event) =>{
         setSize(Number(event.target.value));
+
     }
 
     const handleSubmit = (event) => {
@@ -31,6 +32,7 @@ export default function Board() {
             }
         }
         setBoard(newBoard);
+        event.target.reset();
     }
     return (
         <div>
